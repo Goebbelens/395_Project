@@ -21,8 +21,8 @@
             <a href="/" class = "nav-par">Главная</a>
             <a href="/?toucans" class = "nav-par">Туканы</a>
             <a href="/?orangutans" class = "nav-par">Орангутаны</a>
-            <a href="#" class = "nav-par">Игуаны</a>
-            <a href="#" class = "nav-par">Попугаи</a>
-            <a href="#" class = "nav-par">Летучие мыши</a>
+            <a href="/?iguanas" class = "nav-par">Игуаны</a>
+            <a href="/?parrots" class = "nav-par">Попугаи</a>
+            <a href="/?bats" class = "nav-par">Летучие мыши</a>
         </nav>
     </header>
