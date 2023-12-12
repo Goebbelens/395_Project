@@ -73,7 +73,13 @@ header.header {
     align-self: center;
     text-align: center;
     width: 100%;
+    border-radius: 30px;
+    transition: .3s;
+}
 
+.header .nav-menu .nav-par:hover {
+    background-color: rgb(206, 167, 150);
+    box-shadow: 0 0 0 15px rgb(206, 167, 150);
 }
 
 
@@ -130,6 +136,12 @@ footer.footer{
     display: grid;
     align-content: center;
     border-radius: 30px;
+    transition: .3s;
+    border: 2px solid rgb(163, 126, 110);
+}
+
+.footer .footer-nav .footer-nav-link:hover {
+    background-color: rgb(212, 172, 156);
 }
 
 .footer .creator-info {
@@ -158,6 +170,99 @@ footer.footer{
     width: 70%;
     text-align: center;
     margin: 10px
+}
+
+/************************************************************************************************/
+/*****************************************AUTHORIZATION******************************************/
+/************************************************************************************************/
+
+.auth-header {
+    display: grid;
+    margin: 0 auto;
+    padding: 5px 10px;
+    max-width: 1400px;
+}
+
+.auth-header .auth-link-container {
+    /* width: 23%; */
+    width: 250px;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    gap: 3px;
+    background-color: rgb(163, 126, 110);
+    border-radius: 30px;
+    border: 3px solid rgb(163, 126, 110);
+}
+
+.auth-header .auth-link-container .auth-link {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    background-color: rgb(196, 153, 134);
+    transition: 0.4s;
+}
+
+.auth-header .auth-link-container .auth-link:hover{
+    background-color: rgb(212, 172, 156);
+    /* background-color: rgb(160, 121, 105); */
+}
+
+.auth-header .auth-link-container .auth-link.auth-left-link {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.auth-header .auth-link-container .auth-link.auth-right-link {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+/************************************************************************************************/
+/******************************************REGISTRATION******************************************/
+/************************************************************************************************/
+
+.main-content .registration-page {
+    width: 950px;
+
+    display: grid;
+    justify-content: center;
+}
+
+.main-content .registration-page .registration-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.main-content .registration-page .auth-form {
+    display: grid;
+}
+
+.main-content .registration-page .auth-form .input-form{
+    font-size: 18px;
+    margin: 10px;
+}
+.main-content .registration-page .auth-form .input-form input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 2px solid rgb(196, 153, 134);
+    /* background-color: rgb(235, 219, 212); */
+    background-color: whitesmoke;
+    transition: .3s;
+}
+
+.main-content .registration-page .auth-form .input-form input:focus {
+    outline: none;
 }
 
 /************************************************************************************************/

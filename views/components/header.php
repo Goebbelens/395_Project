@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$title ?? D-Gallery?></title>
+    <title><?=$title ? $title.' | D-Gallery' : 'D-Gallery'?></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,4 +25,8 @@
             <a href="/?parrots" class = "nav-par">Попугаи</a>
             <a href="/?bats" class = "nav-par">Летучие мыши</a>
         </nav>
+
     </header>
+    <?php
+        require 'auth-header.php';
+    ?>

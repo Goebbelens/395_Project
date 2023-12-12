@@ -18,6 +18,15 @@ animalImages.forEach(animalImage => {
     })
 })
 
+let inputs = document.querySelectorAll(".input-form input");
+inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        input.style.backgroundColor = 'rgb(235, 219, 212)';
+    })
+    input.addEventListener('focusout', () => {
+        input.style.backgroundColor = 'rgb(245, 245, 245)';
+    })
+})
 
 // functions
 
