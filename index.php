@@ -49,13 +49,99 @@ if(!empty($_GET)) {
             $wikiLink = "https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D1%82%D1%83%D1%87%D0%B8%D0%B5_%D0%BC%D1%8B%D1%88%D0%B8";
             require 'views/category_view.php';
             break;
+        case ('favourite'): 
+            $title = 'Избранное';
+            $animalDescTitle = "Избранные изображения";
+            $animalDesc = "";
+            $wikiLink = "";
+            $wikiText = "";
+            require 'views/category_view.php';
+            break;
         case ('log-in'):
             $title = 'Вход';
-            require 'views/log-in_view.php';
+            require 'models/Users.php';
+            require 'core/SignIn.php';
+
+            if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                // 1. получаем данные, проверяем
+                list($errors, $input) = SignIn::validateForm();
+                // DBConnect::d($errors);
+                // DBConnect::d($input);
+
+                if($errors){
+                    // 2. если ошибки есть, показываем форму и отображаем ошибки и ранее введенные данные
+                    require 'views/log-in_view.php';
+                } else {
+                    // 3. если всё ок, то записываем данные в БД
+                    SignIn::processForm($input);
+                }
+            } else {
+                require 'views/log-in_view.php';
+            }
+            break;
+        case ('reset-password'):
+            $title = 'Восстановление пароля';
+            require 'models/Users.php';
+            require 'core/SignIn.php';
+
+            if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                // 1. получаем данные, проверяем
+                list($errors, $input) = SignIn::validateResetForm($_POST['email']);
+                // DBConnect::d($errors);
+                // DBConnect::d($input);
+
+                if($errors){
+                    // 2. если ошибки есть, показываем форму и отображаем ошибки и ранее введенные данные
+                    require 'views/reset-password_view.php';
+                } else {
+                    // 3. если всё ок, то записываем данные в БД
+                    SignIn::processResetForm($input);
+                    DBConnect::d($_POST);
+                    require 'views/new-password_view.php';
+                }
+            } else {
+                require 'views/reset-password_view.php';
+            }
             break;
         case ('registration'):
             $title = 'Регистрация';
-            require 'views/registration_view.php';
+
+            require 'models/Users.php';
+            require_once 'core/SignUp.php';
+
+            // если отправлена форма регистрации
+            if($_SERVER['REQUEST_METHOD'] === "POST"){
+
+                // 1. получаем данные, проверяем
+                list($errors, $input) = SignUp::validateForm();
+                // DBConnect::d($errors);
+                // DBConnect::d($input);
+
+                if($errors){
+                    // 2. если ошибки есть, показываем форму и отображаем ошибки и ранее введенные данные
+                    require 'views/registration_view.php';
+                } else {
+                    // 3. если всё ок, то записываем данные в БД
+                    SignUp::processForm($input);
+                }
+            } else {
+                require 'views/registration_view.php';
+            }
+            break;
+        case ('cabinet'):
+            $title = 'Личный кабинет';
+            require 'models/Users.php';
+            session_start();
+            // получение инфы о клиенте
+            $userInfo = Users::getUserInfo($_SESSION['login']);
+
+            require 'views/cabinet_view.php';
+            
+            break;
+        case ('exit'):
+            session_start();
+            session_unset();
+            header('Location: /');
             break;
         default:
             $title = 'Здесь пусто!';

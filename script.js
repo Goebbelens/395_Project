@@ -5,6 +5,7 @@ logoHeader.addEventListener('click', () => {
 
 let animalImages = document.querySelectorAll(".gallery-img");
 animalImages.forEach(animalImage => {
+    // Увеличение картинки по клику
     animalImage.addEventListener('click', () => {
         if(!animalImage.classList.contains("big-img")) {
             animalImage.classList.add("big-img");
@@ -17,6 +18,7 @@ animalImages.forEach(animalImage => {
         }
     })
 })
+
 
 let inputs = document.querySelectorAll(".input-form input");
 inputs.forEach(input => {

@@ -1,6 +1,13 @@
 <?php
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+
     $logo = rand(1, 3);
     $logoPath = "img/logos/$logo.jpg";
+
+    echo 'Сессия';
+    print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>

@@ -72,7 +72,7 @@ header.header {
     justify-self: center;
     align-self: center;
     text-align: center;
-    width: 100%;
+    width: fit-content;
     border-radius: 30px;
     transition: .3s;
 }
@@ -105,7 +105,7 @@ header.header {
 footer.footer{
     padding: 20px 200px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 66px;
     max-width: 1020px;
     background-color: rgb(218, 181, 165);
     border-radius: 80px;
@@ -221,6 +221,15 @@ footer.footer{
     border-bottom-right-radius: 30px;
 }
 
+/* .auth-header .auth-link-container.auth-exit {
+    width: 125px;
+    grid-template-columns: 1fr;
+}
+
+.auth-header .auth-link-container.auth-exit .auth-link{
+    border-radius: 30px;
+} */
+
 
 /************************************************************************************************/
 /******************************************REGISTRATION******************************************/
@@ -246,6 +255,7 @@ footer.footer{
 .main-content .registration-page .auth-form .input-form{
     font-size: 18px;
     margin: 10px;
+    width: 582.5px;
 }
 .main-content .registration-page .auth-form .input-form input {
     width: 100%;
@@ -264,6 +274,77 @@ footer.footer{
 .main-content .registration-page .auth-form .input-form input:focus {
     outline: none;
 }
+
+.main-content .registration-page .auth-form .input-form .input-error {
+    font-size: 12px;
+    color: tomato;
+}
+
+.main-content .registration-page .auth-form .input-form .reset-password-link {
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: rgb(13, 112, 194);
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.main-content .registration-page .auth-form .input-form .reset-password-link:hover {
+    color: rgb(48, 162, 255);
+}
+
+.main-content .registration-page .new-password-page {
+    display: grid;
+    justify-items: center;
+}
+
+.main-content .registration-page .new-password-page .new-pass {
+    margin: 20px auto;
+    padding: 20px;
+    display: inline-block;
+    width: fit-content;
+    border: 2px solid black;
+}
+
+
+/************************************************************************************************/
+/********************************************CABINET*********************************************/
+/************************************************************************************************/
+
+.main-content .cabinet-info {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 400;
+    height: 400px;
+}
+
+.main-content .cabinet-info .cabinet-image {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.main-content .cabinet-info .cabinet-info-text {
+    display: grid;
+    padding: 20px;
+}
+
+.main-content .cabinet-info .cabinet-info-text .cabinet-info-par {
+    line-height: 170%;
+}
+
+.main-content .cabinet-info .cabinet-info-text .cabinet-info-par span {
+    font-weight: bold;
+}
+
+.main-content .cabinet-info .cabinet-info-text .cabinet-info-par.cabinet-favourite {
+    justify-self: center;
+    width: fit-content;
+    font-size: 24px;
+    margin-top: 10px;
+    color: orangered;
+}
+
 
 /************************************************************************************************/
 /********************************************GALLERY*********************************************/
@@ -301,9 +382,12 @@ footer.footer{
 
 .main-content .animal-desc-container .animal-desc-link {
     font-size: 20px;
+    display: inline-block;
+    width: fit-content;
     text-align: center;
     color: darkcyan;
     align-self: center;
+    justify-self: center;
 }
 
 .main-content .gallery-img-container{
@@ -336,6 +420,7 @@ footer.footer{
     top: 0;
     width: 100vw;
     height: 100vh;
+    
 }
 
 .main-content .gallery .gallery-img.big-img {
@@ -349,7 +434,13 @@ footer.footer{
     margin: auto;
 }
 
-
+.main-content .gallery .gallery-img-container .add-fav-container {
+    position: absolute;
+    display: inline-flex;
+    top: 5px;
+    left: 5px;
+    width: fit-content;
+}
 
 
 
