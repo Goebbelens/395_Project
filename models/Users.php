@@ -87,12 +87,11 @@ class Users
 
         $newPasswordCrypted = password_hash($newPassword, PASSWORD_DEFAULT);
 
-        // $query = "UPDATE password
-        //             FROM users
-        //             WHERE email = ?;";
-        // $statement = $pdo->prepare($query);
-        // $statement->execute([$email]);
-
+        $query = "UPDATE users
+                    SET password = ?
+                    WHERE email = ?;";
+        $statement = $pdo->prepare($query);
+        $statement->execute([strval($newPasswordCrypted), $email]);
         return [$newPasswordCrypted, $newPassword];
     }
 }

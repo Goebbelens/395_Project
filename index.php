@@ -96,7 +96,6 @@ if(!empty($_GET)) {
                 } else {
                     // 3. если всё ок, то записываем данные в БД
                     SignIn::processResetForm($input);
-                    DBConnect::d($_POST);
                     require 'views/new-password_view.php';
                 }
             } else {

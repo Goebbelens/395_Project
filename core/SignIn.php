@@ -123,21 +123,11 @@ class SignIn
 
     public static function processResetForm($input){
 
-        // получаем данные о пользователе для записи в сессию
-        list($newPasswordCrypted, $newPassword) = Users::resetUserPasswordByEmail($input);
+        list($newPasswordCrypted, $newPassword) = Users::resetUserPasswordByEmail($input['email']);
 
         $_POST['newPassword'] = $newPassword;
         
-        // $_POST['newPassword'] = 
-        // // запись данных в сессию
-        // session_start();
-        // $_SESSION['userId'] = $userInfo['userId'];
-        // $_SESSION['login'] = $userInfo['login'];
-        // $_SESSION['firstName'] = $userInfo['first_name'];
-
-        // // на главную
-        // header('Location: /?reset-password');
-    }
+    }//processResetForm($input)
 }
 
 ?>

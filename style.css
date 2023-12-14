@@ -256,6 +256,8 @@ footer.footer{
     font-size: 18px;
     margin: 10px;
     width: 582.5px;
+    justify-self: center;
+    display: grid;
 }
 .main-content .registration-page .auth-form .input-form input {
     width: 100%;
@@ -269,10 +271,17 @@ footer.footer{
     /* background-color: rgb(235, 219, 212); */
     background-color: whitesmoke;
     transition: .3s;
+    justify-self: center;
 }
 
 .main-content .registration-page .auth-form .input-form input:focus {
     outline: none;
+}
+
+.main-content .registration-page .auth-form .input-form input.input-form-submit {
+    /* margin: 0 auto;
+    margin-top: 5px;
+    justify-self: center; */
 }
 
 .main-content .registration-page .auth-form .input-form .input-error {
@@ -365,6 +374,7 @@ footer.footer{
     padding: 20px;
     width: 930px;
     display: grid;
+    justify-self: center;
 }
 
 .main-content .animal-desc-container .animal-desc-head{
@@ -401,8 +411,8 @@ footer.footer{
     width: 100%;
     height: 100%;
     border-radius: 30px;
-    object-fit: contain;
-    border: 1px dotted white;
+    object-fit: cover;
+    border: 2px solid black;
 }
 
 .main-content .gallery .gallery-img-container .gallery-img:hover {
@@ -432,6 +442,7 @@ footer.footer{
     top: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
+    object-fit: contain;;
 }
 
 .main-content .gallery .gallery-img-container .add-fav-container {

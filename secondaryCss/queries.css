@@ -1,0 +1,117 @@
+@media (max-width:1200px) {
+
+    .main-content .home-page .home-page-img {
+        width: 90%;
+        border-radius: 50px;
+    }        
+
+    .main-content .registration-page {
+        width: 750px;
+    }
+
+    header.header {
+        grid-template-columns: 30% 70%;
+    }
+    .header .nav-menu {
+        max-width: 100%;
+    }
+
+    .main-content .animal-desc-container, .main-content .gallery {
+        width: 100%;
+    }
+
+    .main-content .gallery-img-container {
+        height: 250px;
+        width: 250px;
+    }
+
+}
+@media (max-width:900px) {
+    .header .logo-header .logo-img {
+        height: 50px;
+    }
+
+    .header .logo-header .logo-name {
+        font-size: 24px;
+    }
+
+    .header .nav-menu .nav-par {
+        font-size: 16px;
+    }
+
+    .main-content .gallery-img-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    .main-content .registration-page {
+        width: 100%;
+    }
+
+    .main-content .registration-page .auth-form .input-form input {
+        width: 100%;
+    }
+}
+
+@media (max-width:740px) {
+
+    .header .logo-header .logo-name {
+        font-size: 20px;
+    }
+
+    .header .nav-menu .nav-par {
+        font-size: 14px;
+    }
+
+    header.header {
+        grid-template-columns: 25% 75%;
+    }
+}
+
+@media (max-width:720px) {
+    .main-content .gallery-img-container {
+        height: 150px;
+        width: 150px;
+    }
+    footer.footer{
+        padding: 20px 100px;
+    }
+
+    .header .logo-header{
+        margin-left: 15px;
+    }
+
+    .header .logo-header .logo-name {
+        font-size: 24px;
+    }
+
+    .header .nav-menu {
+        max-width: 90%;
+        justify-self: center;
+    }
+
+    .header .nav-menu .nav-par {
+        font-size: 14px;
+    }
+
+    header.header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .main-content .registration-page .auth-form .input-form {
+        width: 480px;
+    }
+}
+
+@media (max-width:560px) {
+    .main-content .gallery-img-container {
+        width: 100%;
+    }
+    .main-content .registration-page .auth-form .input-form {
+        width: 80vw;
+    }
+    footer.footer{
+        padding: 20px 50px;
+    }
+}

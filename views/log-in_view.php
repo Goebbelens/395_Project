@@ -18,8 +18,8 @@
             <div class="input-form">
                 <label>Введите пароль:</label>
                 <input type="password" name="password" placeholder = "Не менее 8 символов">
-                <span class = "input-error"><?=$errors['password'] ?? ''?></span>
                 <a class = 'reset-password-link' href="/?reset-password">Восстановить пароль</a>
+                <span class = "input-error"><?=$errors['password'] ?? ''?></span>
             </div>
 
             <!-- Кнопка отправки -->
